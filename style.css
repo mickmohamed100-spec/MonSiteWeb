@@ -1,0 +1,101 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* Couleur de fond principale de l'image */
+    background-color: #3b597b;
+    color: white;
+    
+    /* C'est la partie la plus importante : */
+    display: flex;
+    flex-direction: column;      /* Met les éléments en colonne */
+    min-height: 100vh;           /* Hauteur de 100% de l'écran */
+    justify-content: space-between; /* Pousse le logo vers le centre/haut et le footer vers le bas */
+    align-items: center;
+    padding: 20px 0; /* Un peu d'aération en haut et en bas */
+}
+
+/* =================================== */
+/* STYLE DU CONTENU CENTRAL        */
+/* =================================== */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centre le logo et le loader verticalement */
+    align-items: center;      /* Centre horizontalement */
+    flex-grow: 1;             /* Permet à cet élément de "pousser" le footer vers le bas */
+}
+
+.splash-logo {
+    font-size: 60px; /* Plus grand */
+    font-weight: bold;
+}
+
+/* Style du logo "1XBET" */
+.logo-1x {
+    color: #FFFFFF; /* Blanc */
+}
+.logo-bet {
+    color: #00aeff; /* Bleu clair */
+}
+
+.loader-container {
+    display: flex;
+    gap: 10px; /* Espace entre les points */
+    margin-top: 30px; /* Espace sous le logo */
+}
+
+.loader-dot {
+    width: 30px;
+    height: 30px;
+    background-color: #2a3f5a; /* Couleur de point "vide" */
+    border-radius: 50%;
+    
+    /* Centrer l'emoji dans le point */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    
+    /* Animation d'apparition */
+    opacity: 0; /* Caché au début */
+    transform: scale(0.5); /* Petit au début */
+}
+
+/* Classe "active" qui sera ajoutée par JavaScript */
+.loader-dot.active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+
+
+/* =================================== */
+/* STYLE DU PIED DE PAGE (FOOTER)  */
+/* =================================== */
+
+footer {
+    width: 100%; /* Prend toute la largeur */
+    text-align: center;
+    padding: 20px;
+    /* On enlève le fond sombre, c'est le même que le body */
+}
+
+.partners-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permet aux logos d'aller à la ligne sur mobile */
+    gap: 25px; /* Espace entre les logos */
+}
+
+.partner-logo img {
+    height: 35px; /* Hauteur fixe pour tous les logos */
+    opacity: 0.7; /* Un peu transparent pour se fondre */
+}
